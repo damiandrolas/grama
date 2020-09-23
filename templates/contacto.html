@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+
+<div class="content-section">
+  <form method="POST" , action="">
+    {{ form.hidden_tag()}}
+    <!-- tag de seguridad crsf token-->
+    <fieldset class="form-group">
+      <legend class="border_botton mb-4"> Consultas </legend>
+      <div class="form-group">
+        {{ form.correo.label(class="form-control-label") }}
+        <!-- etiqueta de la forma; se pueden pasar clases tambien-->
+        {{ form.correo(class="form-control form-control-lg" )}}
+      </div>
+      <div class="form-group">
+        {{ form.message.label(class="form-control-label") }}
+        <!-- etiqueta de la forma; se pueden pasar clases tambien-->
+        {{ form.message (class="form-control form-control-lg") }}
+      </div>
+
+    </fieldset>
+    <div class="form-group">
+      {{ form.submit (class="btn btn-lg btn-secondary")}}
+    </div>
+
+    
+  </form>
+</div>
+
+{% endblock %}
