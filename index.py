@@ -10,7 +10,7 @@ app.secret_key = 'clavesecreta'
 
 #app.config['DEBUG'] = True
 app.config['TESTING'] = False
-app.config['MAIL_SERVER'] = 'smtp.hotmail.com'
+app.config['MAIL_SERVER'] = 'smtp-mail.outlook.com'
 app.config['MAIL_PORT'] = 587   ## 995
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
