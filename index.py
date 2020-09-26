@@ -57,7 +57,7 @@ def pricing():
 
 
 if __name__ == '__main__':
-    app.run(debug = True)         ## mantiene abierta la app para escuchar  debug=True modo de prueba
+    app.run()         ## mantiene abierta la app para escuchar  debug=True modo de prueba
 
 
 
