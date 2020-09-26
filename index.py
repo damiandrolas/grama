@@ -10,13 +10,13 @@ app.secret_key = 'clavesecreta'
 
 #app.config['DEBUG'] = True
 app.config['TESTING'] = False
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465   ## 995
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_SERVER'] = 'smtp.hotmail.com'
+app.config['MAIL_PORT'] = 587   ## 995
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_DEBUG'] = True
-app.config['MAIL_USERNAME'] = 'damiandrolas@gmail.com'
-app.config['MAIL_PASSWORD'] = '21509329'
+app.config['MAIL_USERNAME'] = 'globosentucasa@hotmail.com'
+app.config['MAIL_PASSWORD'] = 'globetes22'
 #app.config['MAIL_DEFAUL_SENDER'] = 
 app.config['MAIL_MAX_EMAILS'] = 5
 #app.config['MAIL_SUPPRESS_SEND']
@@ -44,7 +44,7 @@ def contacto():
     # server.login('damiandrolas@gmail.com','21509329')
     # server.sendmail('damiandrolas@gmail.com')
 
-    msg = Message(email_address, sender=email_address, recipients=['damiandrolas@gmail.com'], body= texto_del_mensaje)
+    msg = Message(email_address, sender=email_address, recipients=['globosentucasa@hotmail.com'], body= texto_del_mensaje)
     correo.send(msg)
     return redirect(url_for('home'))
 
