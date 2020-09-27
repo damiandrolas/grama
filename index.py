@@ -17,7 +17,7 @@ app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_DEBUG'] = True
 app.config['MAIL_USERNAME'] = 'globosentucasa@hotmail.com'
 app.config['MAIL_PASSWORD'] = 'globetes22'
-#app.config['MAIL_DEFAUL_SENDER'] = 
+app.config['MAIL_DEFAUL_SENDER'] = 'globosentucasa@hotmail.com'
 app.config['MAIL_MAX_EMAILS'] = 5
 #app.config['MAIL_SUPPRESS_SEND']
 app.config['MAIL_ASCII_ATTACHMENT'] = False
