@@ -35,7 +35,7 @@ def contacto():
   if form.validate_on_submit():
     flash('Mensaje enviado exitosamente', 'success')
     email_address = form.correo.data
-    texto_del_mensaje = form.message.data
+    texto_del_mensaje = form.message.data + form.correo.data
 
     # message = texto_del_mensaje
     # subject = email_address
@@ -44,7 +44,7 @@ def contacto():
     # server.login('damiandrolas@gmail.com','21509329')
     # server.sendmail('damiandrolas@gmail.com')
 
-    msg = Message(email_address, sender=email_address, recipients=['globosentucasa@hotmail.com'], body= texto_del_mensaje)
+    msg = Message( recipients=['globosentucasa@hotmail.com'], body= texto_del_mensaje)
     correo.send(msg)
     return redirect(url_for('home'))
 
