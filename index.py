@@ -10,14 +10,14 @@ app.secret_key = 'clavesecreta'
 
 #app.config['DEBUG'] = True
 app.config['TESTING'] = False
-app.config['MAIL_SERVER'] = 'smtp-mail.outlook.com'
-app.config['MAIL_PORT'] = 587   ## 995
+app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
+app.config['MAIL_PORT'] = 465   ## 995
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_DEBUG'] = True
-app.config['MAIL_USERNAME'] = 'globosentucasa@hotmail.com'
-app.config['MAIL_PASSWORD'] = 'globetes22'
-app.config['MAIL_DEFAUL_SENDER'] = 'globosentucasa@hotmail.com'
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_DEBUG'] = False
+app.config['MAIL_USERNAME'] = 'apikey'
+app.config['MAIL_PASSWORD'] = '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'
+app.config['MAIL_DEFAUL_SENDER'] = 'apikey'
 app.config['MAIL_MAX_EMAILS'] = 5
 #app.config['MAIL_SUPPRESS_SEND']
 app.config['MAIL_ASCII_ATTACHMENT'] = False
@@ -44,7 +44,7 @@ def contacto():
     # server.login('damiandrolas@gmail.com','21509329')
     # server.sendmail('damiandrolas@gmail.com')
 
-    msg = Message( recipients=['globosentucasa@hotmail.com'], body= texto_del_mensaje)
+    msg = Message( recipients=['damiandrolas@gmail.com'], body= texto_del_mensaje)
     correo.send(msg)
     return redirect(url_for('home'))
 
