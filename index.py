@@ -11,13 +11,13 @@ app.secret_key = 'clavesecreta'
 #app.config['DEBUG'] = True
 app.config['TESTING'] = False
 app.config['MAIL_SERVER'] = 'smtp.sendgrid.net'
-app.config['MAIL_PORT'] = 465   ## 995
+app.config['MAIL_PORT'] = 587   ## 995
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_DEBUG'] = False
 app.config['MAIL_USERNAME'] = 'apikey'
 app.config['MAIL_PASSWORD'] = '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'
-app.config['MAIL_DEFAUL_SENDER'] = 'apikey'
+app.config['MAIL_DEFAUL_SENDER'] = 'damiandrolas@gmail.com'
 app.config['MAIL_MAX_EMAILS'] = 5
 #app.config['MAIL_SUPPRESS_SEND']
 app.config['MAIL_ASCII_ATTACHMENT'] = False
