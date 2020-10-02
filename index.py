@@ -45,7 +45,7 @@ def contacto():
     # server.login('damiandrolas@gmail.com','21509329')
     # server.sendmail('damiandrolas@gmail.com')
 
-    msg = Message(email_address, sender=email_address, recipients=['damiandrolas@gmail.com'], body= texto_del_mensaje)
+    msg = Message(email_address, sender='damiandrolas@gmail.com', recipients=['damiandrolas@gmail.com'], body= texto_del_mensaje)
     correo.send(msg)
     return redirect(url_for('home'))
 
